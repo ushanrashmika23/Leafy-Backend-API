@@ -4,8 +4,8 @@ const app = express();
 
 const PORT = 3004;
 
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
+app.get('/test', (req, res) => {
+    res.send('Leafy Server it working smoothly 😎...');
 });
 
 app.listen(PORT, () => {
