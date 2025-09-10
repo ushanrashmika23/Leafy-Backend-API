@@ -31,7 +31,7 @@ const getAllRecods = (req, res) => {
 };
 
 const getLatestRecod = (req, res) => {
-    DataRecod.findOne().sort({ _id: -1 })
+    DataRecod.findOne().sort({ Date: -1, Time: -1 })
         .then((recod) => res.status(200).json({
             code: 200,
             status: 'success',
