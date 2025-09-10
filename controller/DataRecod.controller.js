@@ -30,4 +30,18 @@ const getAllRecods = (req, res) => {
         }));
 };
 
-module.exports = { addNewRecod, getAllRecods }
+const getLatestRecod = (req, res) => {
+    DataRecod.findOne().sort({ _id: -1 })
+        .then((recod) => res.status(200).json({
+            code: 200,
+            status: 'success',
+            data: { recod }
+        }))
+        .catch((error) => res.status(500).json({
+            code: 500,
+            status: 'error',
+            data: { error: 'Failed to retrieve latest data recod', details: error.message }
+        }));
+};
+
+module.exports = { addNewRecod, getAllRecods, getLatestRecod }

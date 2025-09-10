@@ -4,5 +4,6 @@ const router = express.Router();
 
 router.post('/add', DataRecod.addNewRecod);
 router.get('/all', DataRecod.getAllRecods);
+router.get('/latest', DataRecod.getLatestRecod);
 
 module.exports = router;
