@@ -16,6 +16,8 @@ app.get('/test', (req, res) => {
 
 const UserPlantRoutes = require('./routes/UserPlant.route');
 app.use('/userplants', UserPlantRoutes);
+const DataRecodRoutes = require('./routes/DataRecod.route');
+app.use('/datarecods', DataRecodRoutes);
 
 mongoose.connect(DBSTRING, {
     useNewUrlParser: true,
