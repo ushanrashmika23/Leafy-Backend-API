@@ -8,7 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const PORT = 3004;
-const DBSTRING = 'mongodb+srv://ushanrashmika23_db_user:1vZE8sjB1mW4RF6g@cluster-leafy.54pzqyh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-leafy';
+const DBSTRING = 'mongodb+srv://ushanrashmika23_db_user:1vZE8sjB1mW4RF6g@cluster-leafy.54pzqyh.mongodb.net/leafy?retryWrites=true&w=majority&appName=Cluster-leafy';
 
 app.get('/test', (req, res) => {
     res.send('Leafy Server is working smoothly...');
@@ -19,10 +19,7 @@ app.use('/userplants', UserPlantRoutes);
 const DataRecodRoutes = require('./routes/DataRecod.route');
 app.use('/datarecods', DataRecodRoutes);
 
-mongoose.connect(DBSTRING, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect(DBSTRING)
     .then(() => console.log('### ## # MongoDB connected'))
     .catch((error) => console.error('!!! !! ! MongoDB connection error:', error));
 
