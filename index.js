@@ -19,6 +19,8 @@ const UserPlantRoutes = require('./routes/UserPlant.route');
 app.use('/userplants', UserPlantRoutes);
 const DataRecodRoutes = require('./routes/DataRecod.route');
 app.use('/datarecods', DataRecodRoutes);
+const ControllerDeviceRoutes = require('./routes/ControllerDevice.route');
+app.use('/controldevices', ControllerDeviceRoutes);
 
 mongoose.connect(DBSTRING, {
     serverSelectionTimeoutMS: 30000, // 30 seconds
