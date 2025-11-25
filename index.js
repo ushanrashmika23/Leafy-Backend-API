@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3004;
-const DBSTRING = process.env.MONGODB_URI || 'mongodb+srv://ushanrashmika23_db_user:1vZE8sjB1mW4RF6g@cluster-leafy.54pzqyh.mongodb.net/leafy?retryWrites=true&w=majority&appName=Cluster-leafy';
+const DBSTRING = process.env.MONGODB_URI || 'mongodb+srv://ushanrashmika23_db_user:CYwfIXiWx63MELeE@cluster-leafy.54pzqyh.mongodb.net/leafy?retryWrites=true&w=majority&appName=Cluster-leafy';
 
 app.get('/test', (req, res) => {
     res.send('Leafy Server is working smoothly...');
