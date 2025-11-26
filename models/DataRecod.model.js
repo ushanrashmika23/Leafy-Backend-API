@@ -13,7 +13,6 @@ const userPlantSchema = new mongoose.Schema({
         const now = new Date();
         return `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
     }},
-}, { timestamps: true });
-
+});
 const UserPlantData = mongoose.model('UserPlantData', userPlantSchema);
 module.exports = UserPlantData;
