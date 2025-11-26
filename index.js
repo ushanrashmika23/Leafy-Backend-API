@@ -23,6 +23,8 @@ const ControllerDeviceRoutes = require('./routes/ControllerDevice.route');
 app.use('/controldevices', ControllerDeviceRoutes);
 
 mongoose.connect(DBSTRING, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
     serverSelectionTimeoutMS: 30000, // 30 seconds
     socketTimeoutMS: 45000, // 45 seconds
 })
